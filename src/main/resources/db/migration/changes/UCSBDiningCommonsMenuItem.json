@@ -1,0 +1,112 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "UCSBDiningCommonsMenuItem-1",
+        "author": "rohannihalani",
+        "preConditions": [
+          {
+            "onFail": "MARK_RAN"
+          },
+          {
+            "not": [
+              {
+                "tableExists": {
+                  "tableName": "UCSBDININGCOMMONSMENUITEM"
+                }
+              }
+            ]
+          }
+        ],
+        "changes": [
+          {
+            "createTable": {
+              "columns": [
+                {
+                  "column": {
+                    "constraints": {
+                      "primaryKey": true,
+                      "primaryKeyName": "UCSBDININGCOMMONSMENUITEMS_PK"
+                    },
+                    "name": "ID",
+                    "type": "BIGINT"
+                  }
+                },
+
+                {
+                  "column": {
+                    "name": "DINING_COMMONS_CODE",
+                    "type": "VARCHAR(255)"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "NAME",
+                    "type": "VARCHAR(255)"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "STATION",
+                    "type": "VARCHAR(255)"
+                  }
+                }
+              ],
+              "tableName": "UCSBDININGCOMMONSMENUITEM"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "changeSet": {
+        "id": "UCSBDiningCommonsMenuItem-2",
+        "author": "rohannihalani",
+        "comment": "Recreate with autoIncrement on ID; original changeset omitted it so inserts via @GeneratedValue(IDENTITY) failed.",
+        "changes": [
+          {
+            "dropTable": {
+              "tableName": "UCSBDININGCOMMONSMENUITEM"
+            }
+          },
+          {
+            "createTable": {
+              "tableName": "UCSBDININGCOMMONSMENUITEM",
+              "columns": [
+                {
+                  "column": {
+                    "autoIncrement": true,
+                    "constraints": {
+                      "primaryKey": true,
+                      "primaryKeyName": "UCSBDININGCOMMONSMENUITEMS_PK"
+                    },
+                    "name": "ID",
+                    "type": "BIGINT"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "DINING_COMMONS_CODE",
+                    "type": "VARCHAR(255)"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "NAME",
+                    "type": "VARCHAR(255)"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "STATION",
+                    "type": "VARCHAR(255)"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
