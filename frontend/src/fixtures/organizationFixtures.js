@@ -18,7 +18,8 @@ const organizationFixtures = {
     {
       id: 3,
       name: "Data Science Club",
-      description: "A club for students interested in data science.  They have workshops and projects related to data science and machine learning",
+      description:
+        "A club for students interested in data science.  They have workshops and projects related to data science and machine learning",
     },
 
     {
