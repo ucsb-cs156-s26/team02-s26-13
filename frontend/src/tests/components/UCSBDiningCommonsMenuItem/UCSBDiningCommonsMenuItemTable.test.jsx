@@ -142,7 +142,7 @@ describe("UserTable tests", () => {
 
     await waitFor(() =>
       expect(mockedNavigate).toHaveBeenCalledWith(
-        "/ucsbdiningcommonsmenuitems/edit/1",
+        "/ucsbdiningcommonsmenuitem/edit/1",
       ),
     );
   });
@@ -153,7 +153,7 @@ describe("UserTable tests", () => {
 
     const axiosMock = new AxiosMockAdapter(axios);
     axiosMock
-      .onDelete("/api/ucsbdiningcommonsmenuitems")
+      .onDelete("/api/ucsbdiningcommonsmenuitem")
       .reply(200, { message: "Date deleted" });
 
     // act - render the component
