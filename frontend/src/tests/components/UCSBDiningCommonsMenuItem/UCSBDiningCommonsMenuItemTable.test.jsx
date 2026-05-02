@@ -26,7 +26,7 @@ describe("UserTable tests", () => {
       <QueryClientProvider client={queryClient}>
         <MemoryRouter>
           <UCSBDiningCommonsMenuItemTable
-            dates={ucsbDiningCommonsMenuItemFixtures.threeMenuItems}
+            items={ucsbDiningCommonsMenuItemFixtures.threeMenuItems}
             currentUser={currentUser}
           />
         </MemoryRouter>
@@ -72,7 +72,7 @@ describe("UserTable tests", () => {
       <QueryClientProvider client={queryClient}>
         <MemoryRouter>
           <UCSBDiningCommonsMenuItemTable
-            dates={ucsbDiningCommonsMenuItemFixtures.threeMenuItems}
+            items={ucsbDiningCommonsMenuItemFixtures.threeMenuItems}
             currentUser={currentUser}
           />
         </MemoryRouter>
@@ -120,7 +120,7 @@ describe("UserTable tests", () => {
       <QueryClientProvider client={queryClient}>
         <MemoryRouter>
           <UCSBDiningCommonsMenuItemTable
-            dates={ucsbDiningCommonsMenuItemFixtures.threeMenuItems}
+            items={ucsbDiningCommonsMenuItemFixtures.threeMenuItems}
             currentUser={currentUser}
           />
         </MemoryRouter>
@@ -142,7 +142,7 @@ describe("UserTable tests", () => {
 
     await waitFor(() =>
       expect(mockedNavigate).toHaveBeenCalledWith(
-        "/ucsbdiningcommonsmenuitem/edit/1",
+        "/diningcommonsmenuitem/edit/1",
       ),
     );
   });
@@ -161,7 +161,7 @@ describe("UserTable tests", () => {
       <QueryClientProvider client={queryClient}>
         <MemoryRouter>
           <UCSBDiningCommonsMenuItemTable
-            dates={ucsbDiningCommonsMenuItemFixtures.threeMenuItems}
+            items={ucsbDiningCommonsMenuItemFixtures.threeMenuItems}
             currentUser={currentUser}
           />
         </MemoryRouter>
