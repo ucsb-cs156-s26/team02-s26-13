@@ -9,7 +9,7 @@ import {
 import { useNavigate } from "react-router";
 import { hasRole } from "main/utils/useCurrentUser";
 
-export default function UCSBDiningCommonsMenuItemTable({ dates, currentUser }) {
+export default function UCSBDiningCommonsMenuItemTable({ items, currentUser }) {
   const navigate = useNavigate();
 
   const editCallback = (cell) => {
