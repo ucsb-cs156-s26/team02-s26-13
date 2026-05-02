@@ -41,6 +41,14 @@ describe("UCSBOrganizationForm tests", () => {
       const header = screen.getByText(headerText);
       expect(header).toBeInTheDocument();
     });
+
+    expect(screen.getByTestId(`${testId}-orgCode`)).toBeInTheDocument();
+    expect(
+      screen.getByTestId(`${testId}-orgTranslationShort`),
+    ).toBeInTheDocument();
+    expect(screen.getByTestId(`${testId}-orgTranslation`)).toBeInTheDocument();
+    expect(screen.getByTestId(`${testId}-inactive`)).toBeInTheDocument();
+    expect(screen.getByTestId(`${testId}-submit`)).toBeInTheDocument();
   });
 
   test("renders correctly when passing in initialContents", async () => {
@@ -54,6 +62,14 @@ describe("UCSBOrganizationForm tests", () => {
     expect(await screen.findByTestId(`${testId}-orgCode`)).toBeInTheDocument();
     expect(screen.getByTestId(`${testId}-orgCode`)).toHaveValue("ACM");
     expect(screen.getByTestId(`${testId}-orgCode`)).toBeDisabled();
+    expect(
+      screen.getByTestId(`${testId}-orgTranslationShort`),
+    ).toHaveValue("ACM");
+    expect(screen.getByTestId(`${testId}-orgTranslation`)).toHaveValue(
+      "Association for Computing Machinery",
+    );
+    expect(screen.getByTestId(`${testId}-inactive`)).not.toBeChecked();
+    expect(screen.getByTestId(`${testId}-submit`)).toBeInTheDocument();
   });
 
   test("that navigate(-1) is called when Cancel is clicked", async () => {
@@ -79,7 +95,7 @@ describe("UCSBOrganizationForm tests", () => {
     );
 
     expect(await screen.findByText(/Create/)).toBeInTheDocument();
-    const submitButton = screen.getByText(/Create/);
+    const submitButton = screen.getByTestId(`${testId}-submit`);
     fireEvent.click(submitButton);
 
     await screen.findByText(/Organization code is required./);
@@ -91,6 +107,16 @@ describe("UCSBOrganizationForm tests", () => {
     ).toBeInTheDocument();
 
     const orgCodeInput = screen.getByTestId(`${testId}-orgCode`);
+    const orgTranslationShortInput = screen.getByTestId(
+      `${testId}-orgTranslationShort`,
+    );
+    const orgTranslationInput = screen.getByTestId(`${testId}-orgTranslation`);
+    const inactiveInput = screen.getByTestId(`${testId}-inactive`);
+
+    expect(orgTranslationShortInput).toBeInTheDocument();
+    expect(orgTranslationInput).toBeInTheDocument();
+    expect(inactiveInput).toBeInTheDocument();
+
     fireEvent.change(orgCodeInput, { target: { value: "a".repeat(31) } });
     fireEvent.click(submitButton);
 
