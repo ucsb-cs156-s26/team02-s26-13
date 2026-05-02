@@ -62,9 +62,9 @@ describe("UCSBOrganizationForm tests", () => {
     expect(await screen.findByTestId(`${testId}-orgCode`)).toBeInTheDocument();
     expect(screen.getByTestId(`${testId}-orgCode`)).toHaveValue("ACM");
     expect(screen.getByTestId(`${testId}-orgCode`)).toBeDisabled();
-    expect(
-      screen.getByTestId(`${testId}-orgTranslationShort`),
-    ).toHaveValue("ACM");
+    expect(screen.getByTestId(`${testId}-orgTranslationShort`)).toHaveValue(
+      "ACM",
+    );
     expect(screen.getByTestId(`${testId}-orgTranslation`)).toHaveValue(
       "Association for Computing Machinery",
     );
