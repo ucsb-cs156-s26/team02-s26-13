@@ -22,7 +22,7 @@ function MenuItemReviewForm({
 
   const navigate = useNavigate();
 
-  const testIdPrefix = "RestaurantForm";
+  const testIdPrefix = "MenuItemReviewForm";
 
   return (
     <Form onSubmit={handleSubmit(submitAction)}>
@@ -93,9 +93,7 @@ function MenuItemReviewForm({
       </Form.Group>
 
       <Form.Group className="mb-3">
-        <Form.Label htmlFor="dateReviewed">
-          DateReviewed (iso format)
-        </Form.Label>
+        <Form.Label htmlFor="dateReviewed">DateReviewed(iso format)</Form.Label>
         <Form.Control
           data-testid={testIdPrefix + "-dateReviewed"}
           id="dateReviewed"
