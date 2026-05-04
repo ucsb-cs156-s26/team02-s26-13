@@ -4,7 +4,8 @@ const articlesFixtures = {
       id: 1,
       title: "Using React Hooks",
       url: "https://reactjs.org/docs/hooks-intro.html",
-      explanation: "An introduction to React Hooks and how to use them effectively",
+      explanation:
+        "An introduction to React Hooks and how to use them effectively",
       email: "author@example.com",
       dateAdded: "2022-01-02T12:00:00.000Z",
     },
