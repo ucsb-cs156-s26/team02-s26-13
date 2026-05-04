@@ -8,6 +8,7 @@ import axios from "axios";
 import AxiosMockAdapter from "axios-mock-adapter";
 
 const mockedNavigate = vi.fn();
+const mockedToast = vi.fn();
 vi.mock("react-router", async () => {
   const originalModule = await vi.importActual("react-router");
   return {
@@ -15,6 +16,9 @@ vi.mock("react-router", async () => {
     useNavigate: () => mockedNavigate,
   };
 });
+vi.mock("react-toastify", () => ({
+  toast: (message) => mockedToast(message),
+}));
 
 describe("UCSBOrganizationTable tests", () => {
   const queryClient = new QueryClient();
@@ -169,9 +173,11 @@ describe("UCSBOrganizationTable tests", () => {
   test("Delete button calls delete callback", async () => {
     const currentUser = currentUserFixtures.adminUser;
     const axiosMock = new AxiosMockAdapter(axios);
+    const consoleSpy = vi.spyOn(console, "log").mockImplementation(() => {});
+    const successMessage = { message: "Organization deleted" };
     axiosMock
       .onDelete("/api/ucsborganization")
-      .reply(200, { message: "Organization deleted" });
+      .reply(200, successMessage);
 
     render(
       <QueryClientProvider client={queryClient}>
@@ -195,5 +201,8 @@ describe("UCSBOrganizationTable tests", () => {
 
     await waitFor(() => expect(axiosMock.history.delete.length).toBe(1));
     expect(axiosMock.history.delete[0].params).toEqual({ orgCode: "ACM" });
+    await waitFor(() => expect(mockedToast).toHaveBeenCalledWith(successMessage));
+    expect(consoleSpy).toHaveBeenCalledWith(successMessage);
+    consoleSpy.mockRestore();
   });
 });
