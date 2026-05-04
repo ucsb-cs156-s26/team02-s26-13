@@ -175,9 +175,7 @@ describe("UCSBOrganizationTable tests", () => {
     const axiosMock = new AxiosMockAdapter(axios);
     const consoleSpy = vi.spyOn(console, "log").mockImplementation(() => {});
     const successMessage = { message: "Organization deleted" };
-    axiosMock
-      .onDelete("/api/ucsborganization")
-      .reply(200, successMessage);
+    axiosMock.onDelete("/api/ucsborganization").reply(200, successMessage);
 
     render(
       <QueryClientProvider client={queryClient}>
@@ -201,7 +199,9 @@ describe("UCSBOrganizationTable tests", () => {
 
     await waitFor(() => expect(axiosMock.history.delete.length).toBe(1));
     expect(axiosMock.history.delete[0].params).toEqual({ orgCode: "ACM" });
-    await waitFor(() => expect(mockedToast).toHaveBeenCalledWith(successMessage));
+    await waitFor(() =>
+      expect(mockedToast).toHaveBeenCalledWith(successMessage),
+    );
     expect(consoleSpy).toHaveBeenCalledWith(successMessage);
     consoleSpy.mockRestore();
   });
