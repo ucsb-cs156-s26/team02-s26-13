@@ -23,4 +23,4 @@ repo_name: "TBD"
 repo: ucsb-cs156-s26/team02-s26-13
 owner: ucsb-cs156-s26
 repo_name: team02-s26-13
-pull_requests: [{"author":{"id":"U_kgDOCyANAw","is_bot":false,"login":"Joaquin-Wong","name":""},"headRefName":"jw-MenuItemReview-backend","number":73,"title":"jw - adding backend capabilities from team01","url":"https://github.com/ucsb-cs156-s26/team02-s26-13/pull/73"}]
+pull_requests: [{"author":{"id":"U_kgDOCyANAw","is_bot":false,"login":"Joaquin-Wong","name":""},"headRefName":"jw-MenuItemReview-fixtures","number":74,"title":"jw - menu item review fixtures","url":"https://github.com/ucsb-cs156-s26/team02-s26-13/pull/74"},{"author":{"id":"U_kgDOCyANAw","is_bot":false,"login":"Joaquin-Wong","name":""},"headRefName":"jw-MenuItemReview-backend","number":73,"title":"jw - adding backend capabilities from team01","url":"https://github.com/ucsb-cs156-s26/team02-s26-13/pull/73"}]
