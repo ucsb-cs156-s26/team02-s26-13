@@ -99,9 +99,7 @@ describe("RecommendationRequestForm tests", () => {
     fireEvent.click(submitButton);
 
     await screen.findByText(/Requester Email is required/);
-    expect(
-      screen.getByText(/Professor Email is required/),
-    ).toBeInTheDocument();
+    expect(screen.getByText(/Professor Email is required/)).toBeInTheDocument();
     expect(screen.getByText(/Explanation is required/)).toBeInTheDocument();
     expect(screen.getByText(/Date Requested is required/)).toBeInTheDocument();
     expect(screen.getByText(/Date Needed is required/)).toBeInTheDocument();
