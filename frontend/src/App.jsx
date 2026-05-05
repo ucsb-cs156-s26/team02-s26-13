@@ -104,6 +104,7 @@ function App() {
       )}
       {hasRole(currentUser, "ROLE_USER") && (
         <>
+<<<<<<< HEAD
           <Route exact path="/placeholder" element={<PlaceholderIndexPage />} />
           <Route exact path="/articles" element={<ArticlesIndexPage />} />
         </>
@@ -124,6 +125,8 @@ function App() {
       )}
       {hasRole(currentUser, "ROLE_USER") && (
         <>
+=======
+>>>>>>> 3a37974 (Restore HelpRequest routes and app tests)
           <Route
             exact
             path="/ucsborganization"

@@ -45,7 +45,7 @@ describe("App route tests", () => {
     );
 
     expect(
-      await screen.findByText("Index page not yet implemented"),
+      await screen.findByRole("heading", { name: "UCSBOrganization" }),
     ).toBeInTheDocument();
   });
 
