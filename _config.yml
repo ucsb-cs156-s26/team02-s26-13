@@ -23,4 +23,4 @@ repo_name: "TBD"
 repo: ucsb-cs156-s26/team02-s26-13
 owner: ucsb-cs156-s26
 repo_name: team02-s26-13
-pull_requests: [{"author":{"id":"MDQ6VXNlcjYyMzExNjU3","is_bot":false,"login":"AryaSadeghi21","name":"Arya Sadeghi"},"headRefName":"as-recform","number":102,"title":"as - added form component for rec req","url":"https://github.com/ucsb-cs156-s26/team02-s26-13/pull/102"},{"author":{"id":"U_kgDOBqmR9Q","is_bot":false,"login":"safwanmrahman","name":"Safwan Rahman"},"headRefName":"HelpRequest-CopyPlaceholders","number":101,"title":"Add HelpRequest placeholder pages and routes","url":"https://github.com/ucsb-cs156-s26/team02-s26-13/pull/101"}]
+pull_requests: [{"author":{"id":"U_kgDOCVHkOQ","is_bot":false,"login":"nickkamenica","name":""},"headRefName":"articles-index-page-nick","number":103,"title":"Index page working","url":"https://github.com/ucsb-cs156-s26/team02-s26-13/pull/103"},{"author":{"id":"MDQ6VXNlcjYyMzExNjU3","is_bot":false,"login":"AryaSadeghi21","name":"Arya Sadeghi"},"headRefName":"as-recform","number":102,"title":"as - added form component for rec req","url":"https://github.com/ucsb-cs156-s26/team02-s26-13/pull/102"}]
