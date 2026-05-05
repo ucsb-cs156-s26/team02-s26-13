@@ -174,9 +174,9 @@ describe("ArticlesForm tests", () => {
   test("shows correct validation error on bad date input", async () => {
     render(
       <QueryClientProvider client={queryClient}>
-      <Router>
+        <Router>
           <ArticlesForm />
-      </Router>
+        </Router>
       </QueryClientProvider>,
     );
 
