@@ -51,9 +51,7 @@ describe("HelpRequestForm tests", () => {
   test("renders correctly when passing in initialContents", async () => {
     render(
       <Router>
-        <HelpRequestForm
-          initialContents={helpRequestFixtures.oneHelpRequest}
-        />
+        <HelpRequestForm initialContents={helpRequestFixtures.oneHelpRequest} />
       </Router>,
     );
 

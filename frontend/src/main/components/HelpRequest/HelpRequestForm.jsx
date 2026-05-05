@@ -20,8 +20,6 @@ function HelpRequestForm({
 
   // Stryker disable Regex
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/i;
-  const isoDateRegex =
-    /(\d{4}-[01]\d-[0-3]\dT[0-2]\d:\d{2}:\d{2})|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:\d{2})/i;
   // Stryker restore Regex
 
   return (
@@ -111,10 +109,6 @@ function HelpRequestForm({
               isInvalid={Boolean(errors.requestTime)}
               {...register("requestTime", {
                 required: "Request time is required.",
-                pattern: {
-                  value: isoDateRegex,
-                  message: "Request time must be a valid date and time.",
-                },
               })}
             />
             <Form.Control.Feedback type="invalid">
