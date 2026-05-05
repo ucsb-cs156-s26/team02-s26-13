@@ -81,9 +81,7 @@ describe("RecommendationRequestForm tests", () => {
     expect(
       await screen.findByTestId(`${testId}-requesterEmail`),
     ).toBeInTheDocument();
-    expect(
-      screen.getByTestId(`${testId}-professorEmail`),
-    ).toBeInTheDocument();
+    expect(screen.getByTestId(`${testId}-professorEmail`)).toBeInTheDocument();
     expect(screen.getByTestId(`${testId}-explanation`)).toBeInTheDocument();
     expect(screen.getByTestId(`${testId}-dateRequested`)).toBeInTheDocument();
     expect(screen.getByTestId(`${testId}-dateNeeded`)).toBeInTheDocument();
@@ -121,9 +119,7 @@ describe("RecommendationRequestForm tests", () => {
     fireEvent.click(submitButton);
 
     await screen.findByText(/Requester Email is required/);
-    expect(
-      screen.getByText(/Professor Email is required/),
-    ).toBeInTheDocument();
+    expect(screen.getByText(/Professor Email is required/)).toBeInTheDocument();
     expect(screen.getByText(/Explanation is required/)).toBeInTheDocument();
     expect(screen.getByText(/Date Requested is required/)).toBeInTheDocument();
     expect(screen.getByText(/Date Needed is required/)).toBeInTheDocument();
