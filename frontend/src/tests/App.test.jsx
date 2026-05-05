@@ -62,7 +62,7 @@ describe("App route tests", () => {
     );
 
     expect(
-      await screen.findByText("Create page not yet implemented"),
+      await screen.findByText("Create New UCSBOrganization"),
     ).toBeInTheDocument();
   });
 
