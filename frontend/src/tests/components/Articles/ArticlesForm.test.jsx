@@ -171,4 +171,38 @@ describe("ArticlesForm tests", () => {
       screen.queryByText(/Email must be a valid email address./),
     ).not.toBeInTheDocument();
   });
+  test("shows correct validation error on bad date input", async () => {
+    render(
+      <QueryClientProvider client={queryClient}>
+      <Router>
+          <ArticlesForm />
+      </Router>
+      </QueryClientProvider>,
+    );
+
+    await screen.findByTestId(`${testId}-dateAdded`);
+
+    fireEvent.change(screen.getByTestId(`${testId}-title`), {
+      target: { value: "Test Article" },
+    });
+    fireEvent.change(screen.getByTestId(`${testId}-url`), {
+      target: { value: "https://example.com" },
+    });
+    fireEvent.change(screen.getByTestId(`${testId}-explanation`), {
+      target: { value: "A test explanation" },
+    });
+    fireEvent.change(screen.getByTestId(`${testId}-email`), {
+      target: { value: "test@example.com" },
+    });
+    fireEvent.change(screen.getByTestId(`${testId}-dateAdded`), {
+      target: { value: "bad-date" },
+    });
+
+    fireEvent.click(screen.getByTestId(`${testId}-submit`));
+
+    await screen.findByText(/Date Added must be in ISO format./);
+    expect(
+      screen.getByText(/Date Added must be in ISO format./),
+    ).toBeInTheDocument();
+  });
 });
