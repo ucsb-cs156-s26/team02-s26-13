@@ -195,7 +195,7 @@ describe("ArticlesForm tests", () => {
       target: { value: "test@example.com" },
     });
     fireEvent.change(screen.getByTestId(`${testId}-dateAdded`), {
-      target: { value: "bad-date" },
+      target: { value: "not-a-valid-date" },
     });
 
     fireEvent.click(screen.getByTestId(`${testId}-submit`));
