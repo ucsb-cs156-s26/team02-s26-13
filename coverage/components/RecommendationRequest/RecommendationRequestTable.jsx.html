@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for components/MenuItemReviews/MenuItemReviewTable.jsx</title>
+    <title>Code coverage report for components/RecommendationRequest/RecommendationRequestTable.jsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">components/MenuItemReviews</a> MenuItemReviewTable.jsx</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">components/RecommendationRequest</a> RecommendationRequestTable.jsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -138,7 +138,13 @@
 <a name='L73'></a><a href='#L73'>73</a>
 <a name='L74'></a><a href='#L74'>74</a>
 <a name='L75'></a><a href='#L75'>75</a>
-<a name='L76'></a><a href='#L76'>76</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -154,28 +160,26 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">15x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">15x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">15x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -202,14 +206,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">15x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -220,27 +232,26 @@ import { useBackendMutation } from "main/utils/useBackend";
 import {
   cellToAxiosParamsDelete,
   onDeleteSuccess,
-} from "main/utils/menuItemReviewUtils";
+} from "main/utils/recommendationRequestUtils";
 import { useNavigate } from "react-router";
 import { hasRole } from "main/utils/useCurrentUser";
 &nbsp;
-export default function MenuItemReviewTable({
-  menuItemReviews,
+export default function RecommendationRequestTable({
+  recommendationRequests,
   currentUser,
-  testIdPrefix = "MenuItemReviewTable",
+  testIdPrefix = "RecommendationRequestTable",
 }) {
   const navigate = useNavigate();
 &nbsp;
   const editCallback = (cell) =&gt; {
-    navigate(`/menuitemreviews/edit/${cell.row.original.id}`);
+    navigate(`/recommendationrequest/edit/${cell.row.original.id}`);
   };
 &nbsp;
   // Stryker disable all : hard to test for query caching
-&nbsp;
   const deleteMutation = useBackendMutation(
     cellToAxiosParamsDelete,
     { onSuccess: onDeleteSuccess },
-    ["/api/menuitemreviews/all"],
+    ["/api/recommendationrequest/all"],
   );
   // Stryker restore all
 &nbsp;
@@ -252,28 +263,31 @@ export default function MenuItemReviewTable({
   const columns = [
     {
       header: "id",
-      accessorKey: "id", // accessor is the "key" in the data
-    },
-&nbsp;
-    {
-      header: "ItemId",
-      accessorKey: "itemId",
+      accessorKey: "id",
     },
     {
-      header: "ReviewerEmail",
-      accessorKey: "reviewerEmail",
+      header: "Requester Email",
+      accessorKey: "requesterEmail",
     },
     {
-      header: "Stars",
-      accessorKey: "stars",
+      header: "Professor Email",
+      accessorKey: "professorEmail",
     },
     {
-      header: "DateReviewed",
-      accessorKey: "dateReviewed",
+      header: "Explanation",
+      accessorKey: "explanation",
     },
     {
-      header: "Comments",
-      accessorKey: "comments",
+      header: "Date Requested",
+      accessorKey: "dateRequested",
+    },
+    {
+      header: "Date Needed",
+      accessorKey: "dateNeeded",
+    },
+    {
+      header: "Done",
+      accessorKey: "done",
     },
   ];
 &nbsp;
@@ -285,7 +299,11 @@ export default function MenuItemReviewTable({
   }
 &nbsp;
   return (
-    &lt;OurTable data={menuItemReviews} columns={columns} testid={testIdPrefix} /&gt;
+    &lt;OurTable
+      data={recommendationRequests}
+      columns={columns}
+      testid={testIdPrefix}
+    /&gt;
   );
 }
 &nbsp;</pre></td></tr></table></pre>
