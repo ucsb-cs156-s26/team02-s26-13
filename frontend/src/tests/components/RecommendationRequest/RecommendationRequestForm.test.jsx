@@ -69,6 +69,28 @@ describe("RecommendationRequestForm tests", () => {
     expect(screen.getByText(`Id`)).toBeInTheDocument();
   });
 
+  test("renders all form fields with correct test ids", async () => {
+    render(
+      <QueryClientProvider client={queryClient}>
+        <Router>
+          <RecommendationRequestForm />
+        </Router>
+      </QueryClientProvider>,
+    );
+
+    expect(
+      await screen.findByTestId(`${testId}-requesterEmail`),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByTestId(`${testId}-professorEmail`),
+    ).toBeInTheDocument();
+    expect(screen.getByTestId(`${testId}-explanation`)).toBeInTheDocument();
+    expect(screen.getByTestId(`${testId}-dateRequested`)).toBeInTheDocument();
+    expect(screen.getByTestId(`${testId}-dateNeeded`)).toBeInTheDocument();
+    expect(screen.getByTestId(`${testId}-done`)).toBeInTheDocument();
+    expect(screen.getByTestId(`${testId}-submit`)).toBeInTheDocument();
+  });
+
   test("that navigate(-1) is called when Cancel is clicked", async () => {
     render(
       <QueryClientProvider client={queryClient}>
@@ -99,7 +121,9 @@ describe("RecommendationRequestForm tests", () => {
     fireEvent.click(submitButton);
 
     await screen.findByText(/Requester Email is required/);
-    expect(screen.getByText(/Professor Email is required/)).toBeInTheDocument();
+    expect(
+      screen.getByText(/Professor Email is required/),
+    ).toBeInTheDocument();
     expect(screen.getByText(/Explanation is required/)).toBeInTheDocument();
     expect(screen.getByText(/Date Requested is required/)).toBeInTheDocument();
     expect(screen.getByText(/Date Needed is required/)).toBeInTheDocument();
