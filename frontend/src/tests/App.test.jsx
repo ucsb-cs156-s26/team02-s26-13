@@ -82,4 +82,55 @@ describe("App route tests", () => {
       await screen.findByText("Edit page not yet implemented"),
     ).toBeInTheDocument();
   });
+
+  test("routes /helprequest to the index page for a user", async () => {
+    setupUserOnly();
+    const queryClient = new QueryClient();
+
+    render(
+      <QueryClientProvider client={queryClient}>
+        <MemoryRouter initialEntries={["/helprequest"]}>
+          <App />
+        </MemoryRouter>
+      </QueryClientProvider>,
+    );
+
+    expect(
+      await screen.findByText("Index page not yet implemented"),
+    ).toBeInTheDocument();
+  });
+
+  test("routes /helprequest/create to the create page for an admin", async () => {
+    setupAdminUser();
+    const queryClient = new QueryClient();
+
+    render(
+      <QueryClientProvider client={queryClient}>
+        <MemoryRouter initialEntries={["/helprequest/create"]}>
+          <App />
+        </MemoryRouter>
+      </QueryClientProvider>,
+    );
+
+    expect(
+      await screen.findByText("Create page not yet implemented"),
+    ).toBeInTheDocument();
+  });
+
+  test("routes /helprequest/edit/1 to the edit page for an admin", async () => {
+    setupAdminUser();
+    const queryClient = new QueryClient();
+
+    render(
+      <QueryClientProvider client={queryClient}>
+        <MemoryRouter initialEntries={["/helprequest/edit/1"]}>
+          <App />
+        </MemoryRouter>
+      </QueryClientProvider>,
+    );
+
+    expect(
+      await screen.findByText("Edit page not yet implemented"),
+    ).toBeInTheDocument();
+  });
 });
