@@ -64,6 +64,23 @@ describe("MenuItemReviewForm tests", () => {
 
     expect(await screen.findByTestId(`${testId}-id`)).toBeInTheDocument();
     expect(screen.getByText(`Id`)).toBeInTheDocument();
+
+    expect(screen.getByLabelText("Id")).toHaveValue(
+      String(menuItemReviewFixtures.oneMenuItemReview.id),
+    );
+    expect(screen.getByLabelText("ItemId")).toHaveValue(
+      String(menuItemReviewFixtures.oneMenuItemReview.itemId),
+    );
+    expect(screen.getByLabelText("ReviewerEmail")).toHaveValue(
+      menuItemReviewFixtures.oneMenuItemReview.reviewerEmail,
+    );
+    expect(screen.getByLabelText("Stars")).toHaveValue(
+      String(menuItemReviewFixtures.oneMenuItemReview.stars),
+    );
+    //expect(screen.getByLabelText("DateReviewed(iso format)")).toHaveValue(menuItemReviewFixtures.oneMenuItemReview.dateReviewed)
+    expect(screen.getByLabelText("Comments")).toHaveValue(
+      menuItemReviewFixtures.oneMenuItemReview.comments,
+    );
   });
 
   test("that navigate(-1) is called when Cancel is clicked", async () => {
