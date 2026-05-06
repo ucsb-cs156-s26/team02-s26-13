@@ -126,6 +126,9 @@ describe("App route tests", () => {
 
   test("routes /helprequest/edit/1 to the edit page for an admin", async () => {
     setupAdminUser();
+    axiosMock
+      .onGet("/api/helprequests", { params: { id: "1" } })
+      .reply(200, helpRequestFixtures.oneHelpRequest);
     const queryClient = new QueryClient();
 
     render(
@@ -136,8 +139,6 @@ describe("App route tests", () => {
       </QueryClientProvider>,
     );
 
-    expect(
-      await screen.findByText("Edit page not yet implemented"),
-    ).toBeInTheDocument();
+    expect(await screen.findByText("Edit HelpRequest")).toBeInTheDocument();
   });
 });
