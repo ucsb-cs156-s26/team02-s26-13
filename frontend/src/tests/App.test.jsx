@@ -4,6 +4,7 @@ import { MemoryRouter } from "react-router";
 import App from "../App";
 import { apiCurrentUserFixtures } from "fixtures/currentUserFixtures";
 import { systemInfoFixtures } from "fixtures/systemInfoFixtures";
+import { helpRequestFixtures } from "fixtures/helpRequestFixtures";
 import axios from "axios";
 import AxiosMockAdapter from "axios-mock-adapter";
 
@@ -19,6 +20,9 @@ describe("App route tests", () => {
     axiosMock
       .onGet("/api/systemInfo")
       .reply(200, systemInfoFixtures.showingNeither);
+    axiosMock
+      .onGet("/api/helprequests/all")
+      .reply(200, helpRequestFixtures.threeHelpRequests);
   };
 
   const setupAdminUser = () => {
@@ -30,6 +34,9 @@ describe("App route tests", () => {
     axiosMock
       .onGet("/api/systemInfo")
       .reply(200, systemInfoFixtures.showingNeither);
+    axiosMock
+      .onGet("/api/helprequests/all")
+      .reply(200, helpRequestFixtures.threeHelpRequests);
   };
 
   test("routes /ucsborganization to the index page for a user", async () => {
@@ -96,7 +103,7 @@ describe("App route tests", () => {
     );
 
     expect(
-      await screen.findByText("Index page not yet implemented"),
+      await screen.findByRole("heading", { name: "HelpRequests" }),
     ).toBeInTheDocument();
   });
 
