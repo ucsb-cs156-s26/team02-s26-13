@@ -23,4 +23,4 @@ repo_name: "TBD"
 repo: ucsb-cs156-s26/team02-s26-13
 owner: ucsb-cs156-s26
 repo_name: team02-s26-13
-pull_requests: [{"author":{"id":"U_kgDOBqmR9Q","is_bot":false,"login":"safwanmrahman","name":"Safwan Rahman"},"headRefName":"HelpRequestEdit","number":116,"title":"Implement HelpRequest Edit page with tests and story","url":"https://github.com/ucsb-cs156-s26/team02-s26-13/pull/116"},{"author":{"id":"MDQ6VXNlcjg5ODE4MjE3","is_bot":false,"login":"pgunhal","name":"Pranav Gunhal"},"headRefName":"pgunhal-team03","number":115,"title":"IT for UCSBOrganization","url":"https://github.com/ucsb-cs156-s26/team02-s26-13/pull/115"}]
+pull_requests: [{"author":{"id":"MDQ6VXNlcjg5ODE4MjE3","is_bot":false,"login":"pgunhal","name":"Pranav Gunhal"},"headRefName":"pgunhal-team03","number":115,"title":"IT for UCSBOrganization","url":"https://github.com/ucsb-cs156-s26/team02-s26-13/pull/115"}]
