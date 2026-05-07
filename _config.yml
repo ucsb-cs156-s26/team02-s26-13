@@ -23,4 +23,4 @@ repo_name: "TBD"
 repo: ucsb-cs156-s26/team02-s26-13
 owner: ucsb-cs156-s26
 repo_name: team02-s26-13
-pull_requests: [{"author":{"id":"MDQ6VXNlcjYyMzExNjU3","is_bot":false,"login":"AryaSadeghi21","name":"Arya Sadeghi"},"headRefName":"as-recPlaceholders","number":117,"title":"as - add rec placeholders","url":"https://github.com/ucsb-cs156-s26/team02-s26-13/pull/117"}]
+pull_requests: [{"author":{"id":"MDQ6VXNlcjc5ODYzNTE4","is_bot":false,"login":"rohannihalani","name":"Rohan Nihalani"},"headRefName":"team03-rohannihalani-integrationTests","number":118,"title":"Integration Tests for UCSBDiningCommonsMenuItem","url":"https://github.com/ucsb-cs156-s26/team02-s26-13/pull/118"},{"author":{"id":"MDQ6VXNlcjYyMzExNjU3","is_bot":false,"login":"AryaSadeghi21","name":"Arya Sadeghi"},"headRefName":"as-recPlaceholders","number":117,"title":"as - add rec placeholders","url":"https://github.com/ucsb-cs156-s26/team02-s26-13/pull/117"}]
