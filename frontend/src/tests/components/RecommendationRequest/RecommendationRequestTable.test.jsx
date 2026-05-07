@@ -188,7 +188,7 @@ describe("RecommendationRequestTable tests", () => {
 
     const axiosMock = new AxiosMockAdapter(axios);
     axiosMock
-      .onDelete("/api/recommendationrequest")
+      .onDelete("/api/recommendationrequests")
       .reply(200, { message: "RecommendationRequest deleted" });
 
     render(
