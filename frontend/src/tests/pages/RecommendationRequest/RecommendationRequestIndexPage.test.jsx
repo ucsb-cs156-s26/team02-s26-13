@@ -146,7 +146,7 @@ describe("RecommendationRequestIndexPage tests", () => {
       .onGet("/api/recommendationrequests/all")
       .reply(200, recommendationRequestFixtures.threeRecommendationRequests);
     axiosMock
-      .onDelete("/api/recommendationrequest")
+      .onDelete("/api/recommendationrequests")
       .reply(200, "RecommendationRequest with id 1 was deleted");
 
     render(
@@ -183,7 +183,7 @@ describe("RecommendationRequestIndexPage tests", () => {
     await waitFor(() => {
       expect(axiosMock.history.delete.length).toBe(1);
     });
-    expect(axiosMock.history.delete[0].url).toBe("/api/recommendationrequest");
+    expect(axiosMock.history.delete[0].url).toBe("/api/recommendationrequests");
     expect(axiosMock.history.delete[0].params).toEqual({ id: 1 });
   });
 });

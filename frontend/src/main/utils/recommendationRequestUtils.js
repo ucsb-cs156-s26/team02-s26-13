@@ -10,7 +10,7 @@ export function onDeleteSuccess(message) {
 export function cellToAxiosParamsDelete(cell) {
   return {
     // Stryker disable next-line all
-    url: "/api/recommendationrequest",
+    url: "/api/recommendationrequests",
     method: "DELETE",
     params: {
       id: cell.row.original.id,
