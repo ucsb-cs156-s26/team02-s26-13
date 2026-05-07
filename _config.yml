@@ -23,4 +23,4 @@ repo_name: "TBD"
 repo: ucsb-cs156-s26/team02-s26-13
 owner: ucsb-cs156-s26
 repo_name: team02-s26-13
-pull_requests: [{"author":{"id":"MDQ6VXNlcjYyMzExNjU3","is_bot":false,"login":"AryaSadeghi21","name":"Arya Sadeghi"},"headRefName":"as-integrationTests","number":129,"title":"as - completed integration tests for Recommendation Request","url":"https://github.com/ucsb-cs156-s26/team02-s26-13/pull/129"}]
+pull_requests: [{"author":{"id":"MDQ6VXNlcjYyMzExNjU3","is_bot":false,"login":"AryaSadeghi21","name":"Arya Sadeghi"},"headRefName":"as-end2endRec","number":130,"title":"as - completed end to end testing on Recommendation Request","url":"https://github.com/ucsb-cs156-s26/team02-s26-13/pull/130"},{"author":{"id":"MDQ6VXNlcjYyMzExNjU3","is_bot":false,"login":"AryaSadeghi21","name":"Arya Sadeghi"},"headRefName":"as-integrationTests","number":129,"title":"as - completed integration tests for Recommendation Request","url":"https://github.com/ucsb-cs156-s26/team02-s26-13/pull/129"}]
