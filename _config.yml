@@ -23,4 +23,4 @@ repo_name: "TBD"
 repo: ucsb-cs156-s26/team02-s26-13
 owner: ucsb-cs156-s26
 repo_name: team02-s26-13
-pull_requests: [{"author":{"id":"U_kgDOCyANAw","is_bot":false,"login":"Joaquin-Wong","name":""},"headRefName":"jw-web-it-test","number":137,"title":"jw - added end2end tests for MenuItemReviews","url":"https://github.com/ucsb-cs156-s26/team02-s26-13/pull/137"},{"author":{"id":"U_kgDOCVHkOQ","is_bot":false,"login":"nickkamenica","name":""},"headRefName":"integration-test-article","number":136,"title":"Add articles integration test","url":"https://github.com/ucsb-cs156-s26/team02-s26-13/pull/136"}]
+pull_requests: [{"author":{"id":"U_kgDOCyANAw","is_bot":false,"login":"Joaquin-Wong","name":""},"headRefName":"jw-web-it-test","number":137,"title":"jw - added end2end tests for MenuItemReviews","url":"https://github.com/ucsb-cs156-s26/team02-s26-13/pull/137"}]
